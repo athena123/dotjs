@@ -1,7 +1,18 @@
+var baseURL = 'https://me.captnemo.in/';
 $.ajax({
-  url: 'https://me.captnemo.in/.js/'+location.hostname.replace(/^www\./,'')+'.js',
+  url: baseURL+'.js/'+location.hostname.replace(/^www\./,'')+'.js',
   dataType: 'text',
   success: function(d){
     $(function(){ eval(d) })
   }
 })
+
+$.ajax{
+  url: baseURL+'.css/'+window.location.host.replace(/^www\./, '') + '.css',
+  dataType: 'text',
+  success: function(d){
+    var style = document.createElement('style');
+    style.textContent = d;
+    document.head.appendChild(style);
+  }
+}
