@@ -23,7 +23,7 @@ Differences from the fork:
 
 
 #Licence
-Licenced under the MIT Licence
+Licenced under the [MIT Licence](http://nemo.mit-license.org/).
 
 #Credits
 - This is a modified version of the original `dotjs` and `dotcss` extensions by defunkt and stewart
