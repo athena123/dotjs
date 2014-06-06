@@ -7,7 +7,7 @@ $.ajax({
   }
 })
 
-$.ajax{
+$.ajax({
   url: baseURL+'.css/'+window.location.host.replace(/^www\./, '') + '.css',
   dataType: 'text',
   success: function(d){
@@ -15,4 +15,4 @@ $.ajax{
     style.textContent = d;
     document.head.appendChild(style);
   }
-}
+});
