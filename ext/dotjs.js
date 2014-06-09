@@ -5,7 +5,7 @@ $.ajax({
   success: function(d){
     $(function(){ eval(d) })
   }
-})
+});
 
 $.ajax({
   url: baseURL+'.css/'+window.location.host.replace(/^www\./, '') + '.css',
@@ -13,6 +13,11 @@ $.ajax({
   success: function(d){
     var style = document.createElement('style');
     style.textContent = d;
-    document.head.appendChild(style);
+    if(document.head){
+      document.head.appendChild(style);
+    }
+    else{
+      document.body.appendChild(style);
+    }
   }
 });
